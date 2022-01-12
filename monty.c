@@ -1,9 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 /**
  * main - Monty interpreter
  * @argc: number of arguments
@@ -53,14 +48,24 @@ int main(int argc, char *argv[])
 	fclose(leer);
 	exit(EXIT_SUCCESS);
 }
-void match_command(char *line, char *command, stack_t **stack, unsigned int line_number, FILE *leer)
+/**
+ * match_command - Match command
+ * @line: buffer
+ * @command: firs argument of buffer
+ * @stack: stack
+ * @line_number: line number
+ * @leer: file descriptor
+ * Return: void
+ */
+void match_command(char *line, char *command, stack_t **stack,
+		   unsigned int line_number, FILE *leer)
 {
 	int i, flag = 0;
 
 	instruction_t functions[] = {
 		{"push", push},
 		{"pall", pall},
-        {"pint", pint},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 
@@ -71,8 +76,7 @@ void match_command(char *line, char *command, stack_t **stack, unsigned int line
 			functions[i].f(stack, line_number);
 			flag = 1;
 		}
- 	}
-
+	}
 	if (flag == 0)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, command);
@@ -82,12 +86,17 @@ void match_command(char *line, char *command, stack_t **stack, unsigned int line
 		exit(1);
 	}
 }
-
+/**
+ * _isdigit - check if it is digit
+ * @digit: digit
+ *
+ * Return: 0 or 1
+ */
 int _isdigit(char *digit)
 {
 	int i;
 
-	for(i = 0; digit[i] != '\0'; i++)
+	for (i = 0; digit[i] != '\0'; i++)
 	{
 		if (digit[i] < 48 || digit[i] > 57)
 		{
