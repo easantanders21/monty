@@ -60,6 +60,7 @@ void match_command(char *line, char *command, stack_t **stack, unsigned int line
 	instruction_t functions[] = {
 		{"push", push},
 		{"pall", pall},
+        {"pint", pint},
 		{NULL, NULL}
 	};
 
