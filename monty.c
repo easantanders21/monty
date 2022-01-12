@@ -1,4 +1,5 @@
 #include "monty.h"
+int push_arg;
 /**
  * main - Monty interpreter
  * @argc: number of arguments

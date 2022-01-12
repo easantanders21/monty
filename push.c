@@ -1,5 +1,5 @@
 #include "monty.h"
-
+int push_arg;
 /**
  * push - pushes an element to the stack.
  * @stack: struct stack_t
