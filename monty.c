@@ -98,7 +98,7 @@ int _isdigit(char *digit)
 
 	for (i = 0; digit[i] != '\0'; i++)
 	{
-		if (digit[i] < 48 || digit[i] > 57)
+		if ((digit[i] < 48 || digit[i] > 57) && digit[0] != 45)
 		{
 			return (0);
 		}
