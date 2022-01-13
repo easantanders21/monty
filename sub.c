@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * add - doesn’t do anything.
+ * sub - sub second top element to top element.
  * @stack: struct stack_t
  * @line_number: line number to show in error case
  */
