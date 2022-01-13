@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 			status_digit = _isdigit(push_arg_check);
 			if (status_digit == 0)
 			{
-				fprintf(stderr, "L%d: usage: push integer\n", line_number);
-				free(line), free_stack(&stack), fclose(leer);
-				exit(EXIT_FAILURE);
+				fprintf(stderr, "L%d: usage: push integer\n",
+				 line_number);
+				free(line), free_stack(&stack), fclose(leer), exit(EXIT_FAILURE);
 			}
 			push_arg = atoi(push_arg_check);
 		}
