@@ -39,7 +39,7 @@ typedef struct instruction_s
 	void (*f)();
 } instruction_t;
 
-extern int push_arg;
+int push_arg;
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);

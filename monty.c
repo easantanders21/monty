@@ -1,5 +1,6 @@
 #include "monty.h"
-int push_arg;
+
+
 /**
  * main - Monty interpreter
  * @argc: number of arguments
@@ -36,9 +37,8 @@ int main(int argc, char *argv[])
 				free(line);
 				free_stack(&stack);
 				fclose(leer);
-				exit(1);
+				exit(EXIT_FAILURE);
 			}
-			printf("esto devuelve is digit: %d\n", status_digit);
 			push_arg = atoi(push_arg_check);
 		}
 		match_command(line, command, &stack, line_number, leer);
@@ -84,7 +84,7 @@ void match_command(char *line, char *command, stack_t **stack,
 		free(line);
 		free_stack(stack);
 		fclose(leer);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 }
 /**

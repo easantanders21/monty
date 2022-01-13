@@ -1,5 +1,5 @@
 #include "monty.h"
-int push_arg;
+
 /**
  * push - pushes an element to the stack.
  * @stack: struct stack_t
@@ -16,7 +16,7 @@ void push(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		free_stack(stack);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	new->n = push_arg;
 	new->prev = NULL;
