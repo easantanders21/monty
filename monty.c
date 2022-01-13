@@ -68,6 +68,7 @@ void match_command(char *line, char *command, stack_t **stack,
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 
