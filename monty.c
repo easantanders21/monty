@@ -29,10 +29,10 @@ int main(int argc, char *argv[])
 	}
 	while ((status_read = getline(&line, &lineS, leer)) != -1)
 	{
+		line_number++;
 		command = strtok(line, " \t\n");
-		if (command == NULL)
+		if (command == NULL || command[0] == '#')
 		{
-			line_number++;
 			continue;
 		}
 		if (strcmp(command, "push") == 0)
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 			} push_arg = atoi(push_arg_check);
 		}
 		match_command(line, command, &stack, line_number, leer);
-		line_number++;
+		/*line_number++;*/
 	} free(line), free_stack(&stack), fclose(leer), exit(EXIT_SUCCESS);
 }
 /**
