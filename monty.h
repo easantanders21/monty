@@ -1,6 +1,8 @@
-#ifndef MONTY_
-#define MONTY_
+#ifndef MONTY_H
+#define MONTY_H
 
+#define _GNU_SOURCE
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
