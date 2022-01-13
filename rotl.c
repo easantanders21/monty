@@ -10,6 +10,11 @@ void rotl(stack_t **stack, unsigned int line_number)
 	stack_t *tmp1 = *stack;
 	stack_t *tmp2 = *stack;
 
+	if (tmp1 == NULL)
+	{
+		return;
+	}
+
 	tmp1 = tmp1->next;
 	*stack = tmp1;
 	tmp2->next = NULL;
