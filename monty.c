@@ -66,7 +66,8 @@ void match_command(char *line, char *command, stack_t **stack,
 
 	instruction_t functions[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
-		{"swap", swap}, {"nop", nop}, {"add", add}, {"sub", sub}, {NULL, NULL}
+		{"swap", swap}, {"nop", nop}, {"add", add}, {"sub", sub},
+		{"div", divs}, {NULL, NULL}
 	};
 
 	for (i = 0; functions[i].opcode != NULL; i++)
