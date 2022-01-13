@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	FILE *leer;
 	ssize_t status_read = 0;
 	size_t lineS = 0;
-	char *line = NULL, *command, *push_arg_check;
+	char *line = NULL, *command = NULL, *push_arg_check;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0, status_digit;
 
@@ -21,18 +21,20 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	leer = fopen(argv[1], "r");
-
 	if (!leer)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-
 	while ((status_read = getline(&line, &lineS, leer)) != -1)
 	{
 		command = strtok(line, " \t\n");
+		if (command == NULL)
+		{
+			line_number++;
+			continue;
+		}
 		if (strcmp(command, "push") == 0)
 		{
 			push_arg_check = strtok(NULL, "\t\n ");
@@ -42,13 +44,11 @@ int main(int argc, char *argv[])
 				fprintf(stderr, "L%d: usage: push integer\n",
 				 line_number);
 				free(line), free_stack(&stack), fclose(leer), exit(EXIT_FAILURE);
-			}
-			push_arg = atoi(push_arg_check);
+			} push_arg = atoi(push_arg_check);
 		}
 		match_command(line, command, &stack, line_number, leer);
 		line_number++;
-	}
-	free(line), free_stack(&stack), fclose(leer), exit(EXIT_SUCCESS);
+	} free(line), free_stack(&stack), fclose(leer), exit(EXIT_SUCCESS);
 }
 /**
  * match_command - Match command
