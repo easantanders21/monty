@@ -30,14 +30,14 @@ int main(int argc, char *argv[])
 	while ((status_read = getline(&line, &lineS, leer)) != -1)
 	{
 		line_number++;
-		command = strtok(line, " \t\n");
+		command = strtok(line, " \t\n ");
 		if (command == NULL || command[0] == '#')
 		{
 			continue;
 		}
 		if (strcmp(command, "push") == 0)
 		{
-			push_arg_check = strtok(NULL, "\t\n ");
+			push_arg_check = strtok(NULL, " \t\n");
 			status_digit = _isdigit(push_arg_check);
 			if (status_digit == 0)
 			{
@@ -65,12 +65,8 @@ void match_command(char *line, char *command, stack_t **stack,
 	int i, flag = 0;
 
 	instruction_t functions[] = {
-		{"push", push},
-		{"pall", pall},
-		{"pint", pint},
-		{"pop", pop},
-		{"nop", nop},
-		{NULL, NULL}
+		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
+		{"nop", nop}, {NULL, NULL}
 	};
 
 	for (i = 0; functions[i].opcode != NULL; i++)
