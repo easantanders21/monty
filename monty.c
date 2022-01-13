@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 	stack_t *stack = NULL;
 	unsigned int line_number = 0, status_digit;
 
+	variables.flag = 0;
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
@@ -43,9 +44,8 @@ int main(int argc, char *argv[])
 				fprintf(stderr, "L%d: usage: push integer\n",
 				 line_number);
 				free(line), free_stack(&stack), fclose(leer), exit(EXIT_FAILURE);
-			} push_arg = atoi(push_arg_check);
-		}
-		match_command(line, command, &stack, line_number, leer);
+			} variables.push_arg = atoi(push_arg_check);
+		} match_command(line, command, &stack, line_number, leer);
 	} free(line), free_stack(&stack), fclose(leer), exit(EXIT_SUCCESS);
 }
 /**
@@ -67,7 +67,7 @@ void match_command(char *line, char *command, stack_t **stack,
 		{"swap", swap}, {"nop", nop}, {"add", add}, {"sub", sub},
 		{"div", divs}, {"mul", mul}, {"mod", mod},
 		{"pchar", pchar}, {"pstr", pstr}, {"rotl", rotl},
-		{"rotr", rotr}, {NULL, NULL}
+		{"rotr", rotr}, {"stack", fstack}, {"queue", queue}, {NULL, NULL}
 	};
 
 	for (i = 0; functions[i].opcode != NULL; i++)

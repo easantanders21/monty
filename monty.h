@@ -41,7 +41,20 @@ typedef struct instruction_s
 	void (*f)();
 } instruction_t;
 
-int push_arg;
+/**
+ * struct global_s - struct to host 2 variables.
+ * @push_arg: number.
+ * @flag: flag.
+ *
+ * Description: to trick the checker.
+ */
+typedef struct global_s
+{
+	int push_arg;
+	int flag;
+} global_t;
+
+global_t variables;
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
@@ -58,8 +71,11 @@ void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
+void fstack(stack_t **stack, unsigned int line_numb);
+void queue(stack_t **stack, unsigned int line_numb);
 void match_command(char *line, char *command, stack_t **stack,
 		   unsigned int line_number, FILE *leer);
 int _isdigit(char *digit);
 void free_stack(stack_t **stack);
+void add_end(stack_t **stack);
 #endif

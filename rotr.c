@@ -26,6 +26,5 @@ void rotr(stack_t **stack, unsigned int line_number)
 	tmp1->prev = NULL;
 	tmp2->prev = tmp1;
 	*stack = tmp1;
-
 	(void) line_number;
 }
