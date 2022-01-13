@@ -15,6 +15,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+
 	ch = tmp->n;
 
 	if (ch >= 0 && ch <= 255)
@@ -24,7 +25,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		fprintf(stderr, "L%d: can't pchar, value out of range,\n", line_number);
+		fprintf(stderr, "L%d: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 }
