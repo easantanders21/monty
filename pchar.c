@@ -18,7 +18,7 @@ void pchar(stack_t **stack, unsigned int line_number)
 
 	ch = tmp->n;
 
-	if (ch >= 0 && ch <= 255)
+	if (ch > 0 && ch < 127)
 	{
 		putchar(ch);
 		putchar('\n');
