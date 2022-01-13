@@ -1,6 +1,4 @@
 #include "monty.h"
-
-
 /**
  * main - Monty interpreter
  * @argc: number of arguments
@@ -67,7 +65,8 @@ void match_command(char *line, char *command, stack_t **stack,
 	instruction_t functions[] = {
 		{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop},
 		{"swap", swap}, {"nop", nop}, {"add", add}, {"sub", sub},
-		{"div", divs}, {"mul", mul}, {"mod", mod}, {NULL, NULL}
+		{"div", divs}, {"mul", mul}, {"mod", mod},
+		{"pchar", pchar}, {NULL, NULL}
 	};
 
 	for (i = 0; functions[i].opcode != NULL; i++)
