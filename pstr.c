@@ -10,13 +10,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	int str;
 	stack_t *tmp = *stack;
 
-	if (tmp == NULL)
-	{
-		fprintf(stderr, "L%d: can't pstr, stack empty\n", line_number);
-		exit(EXIT_FAILURE);
-	}
-
-
+	(void) line_number;
 	while (tmp)
 	{
 		str = tmp->n;
