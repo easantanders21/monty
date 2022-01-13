@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	FILE *leer;
 	ssize_t status_read = 0;
 	size_t lineS = 0;
-	char *line = NULL, *command = NULL, *push_arg_check;
+	char *line = NULL, *command = NULL, *push_arg_check = NULL;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0, status_digit;
 
@@ -37,9 +37,10 @@ int main(int argc, char *argv[])
 		}
 		if (strcmp(command, "push") == 0)
 		{
-			push_arg_check = strtok(NULL, " \t\n");
-			status_digit = _isdigit(push_arg_check);
-			if (status_digit == 0)
+			push_arg_check = strtok(NULL, "\t\n ");
+			if (push_arg_check != NULL)
+				status_digit = _isdigit(push_arg_check);
+			if (status_digit == 0 || push_arg_check == NULL)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n",
 				 line_number);
@@ -47,7 +48,6 @@ int main(int argc, char *argv[])
 			} push_arg = atoi(push_arg_check);
 		}
 		match_command(line, command, &stack, line_number, leer);
-		/*line_number++;*/
 	} free(line), free_stack(&stack), fclose(leer), exit(EXIT_SUCCESS);
 }
 /**
