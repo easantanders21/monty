@@ -24,6 +24,12 @@ int main(int argc, char *argv[])
 
 	leer = fopen(argv[1], "r");
 
+	if (!leer)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+
 	while ((status_read = getline(&line, &lineS, leer)) != -1)
 	{
 		command = strtok(line, " \t\n");
@@ -34,9 +40,7 @@ int main(int argc, char *argv[])
 			if (status_digit == 0)
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", line_number);
-				free(line);
-				free_stack(&stack);
-				fclose(leer);
+				free(line), free_stack(&stack), fclose(leer);
 				exit(EXIT_FAILURE);
 			}
 			push_arg = atoi(push_arg_check);
@@ -44,10 +48,7 @@ int main(int argc, char *argv[])
 		match_command(line, command, &stack, line_number, leer);
 		line_number++;
 	}
-	free(line);
-	free_stack(&stack);
-	fclose(leer);
-	exit(EXIT_SUCCESS);
+	free(line), free_stack(&stack), fclose(leer), exit(EXIT_SUCCESS);
 }
 /**
  * match_command - Match command
