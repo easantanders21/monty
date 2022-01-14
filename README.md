@@ -29,16 +29,17 @@ Files | Description
 ----- | -----------
 [monty.h](./monty.h) | Header file containing all the function prototypes of this project, and the definition of the structures
 [monty.c](./monty.c) | C main file of the project, contains all work to read, parse, and interpreter monty opcodes
-[push.c](./push.h) | C function to pushes an element to the stack.
+[push.c](./push.c) | C function to pushes an element to the stack.
 [pint.c](./pint.c) | C function prints the value at the top of the stack, followed by a new line
-[1-dlistint_len.c](./1-dlistint_len.c) | C function that returns the number of elements in a linked dlistint_t list
-[2-add_dnodeint.c](./2-add_dnodeint.c) | C function that adds a new node at the beginning of a dlistint_t list
-[3-add_dnodeint_end.c](./3-add_dnodeint_end.c) | C function that adds a new node at the end of a dlistint_t list
-[4-free_dlistint.c](./4-free_dlistint.c) | C function that free a dlistint_t list
-[5-get_dnodeint.c](./5-get_dnodeint.c) | C function that returns the nth node of a dlistint_t linked list
-[6-sum_dlistint.c](./6-sum_dlistint.c) | C function that returns the sum of all the data (n) of a dlistint_t linked list
-[7-insert_dnodeint.c](./7-insert_dnodeint.c) | C function that inserts a new node at a given position
-[8-delete_dnodeint.c](./8-delete_dnodeint.c) | C function that deletes the node at index index of a dlistint_t linked list
+[pop.c](./pop.c) | C function that removes the top element of the stack.
+[swap.c](./swap.c) | C function that swaps the top two elements of the stack.
+[add.c](./add.c) | C function that  adds the top two elements of the stack.
+[nop.c](./nop.c) | C function doesn’t do anything.
+[sub.c](./sub.c) | C function that subtracts the top element of the stack from the second top element of the stack.
+[div.c](./div.c) | C function that divides the second top element of the stack by the top element of the stack.
+[mul.c](./mul.c) | C function that  multiplies the second top element of the stack with the top element of the stack.
+[mod.c](./mod.c) | C function that get  the rest of the division of the second top element of the stack by the top element of the stack.
 
-## Author
+## Authors
+Edgar Santander
 Diego Fernando Jojoa Yandún
