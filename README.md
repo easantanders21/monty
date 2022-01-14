@@ -28,15 +28,15 @@ pall$
 
 1. Clone the repository with the following command:
 
-    git clone https://github.com/easantanders21/monty.git
+        git clone https://github.com/easantanders21/monty.git
 
 2. Your code will be compiled this way:
 
-    $ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
+        $ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
 
 3. Usage the monty file:
 
-    ./monty my_file.m
+        ./monty my_file.m
 
 
 ## Table of contents
