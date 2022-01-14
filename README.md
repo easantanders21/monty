@@ -62,6 +62,6 @@ Files | Description
 
 ## Authors
 
-Edgar Santander(https://github.com/easantanders21)
+[Edgar Santander](https://github.com/easantanders21)
 
-Diego Fernando Jojoa Yandún(https://github.com/diegojojoayandun)
+[Diego Fernando Jojoa Yandún](https://github.com/diegojojoayandun)
