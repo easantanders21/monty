@@ -24,11 +24,20 @@ pall$
 @ubuntu:~/monty$
 ```
 
-## Compilation & Output
+## Instalation, compilation & Output
 
-Your code will be compiled this way:
+1. Clone the repository with the following command:
+
+    git clone https://github.com/easantanders21/monty.git
+
+2. Your code will be compiled this way:
 
     $ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
+
+3. Usage the monty file:
+
+    ./monty my_file.m
+
 
 ## Table of contents
 Files | Description
@@ -47,5 +56,7 @@ Files | Description
 [mod.c](./mod.c) | C function that get  the rest of the division of the second top element of the stack by the top element of the stack.
 
 ## Authors
+
 Edgar Santander
+
 Diego Fernando Jojoa Yandún
