@@ -49,14 +49,19 @@ Files | Description
 [pop.c](./pop.c) | C function that removes the top element of the stack.
 [swap.c](./swap.c) | C function that swaps the top two elements of the stack.
 [add.c](./add.c) | C function that  adds the top two elements of the stack.
-[nop.c](./nop.c) | C function doesn’t do anything.
+[nop.c](./nop.c) | C function that doesn’t do anything.
 [sub.c](./sub.c) | C function that subtracts the top element of the stack from the second top element of the stack.
 [div.c](./div.c) | C function that divides the second top element of the stack by the top element of the stack.
 [mul.c](./mul.c) | C function that  multiplies the second top element of the stack with the top element of the stack.
 [mod.c](./mod.c) | C function that get  the rest of the division of the second top element of the stack by the top element of the stack.
+[pchar.c](./pchar.c) | C function that prints the char at the top of the stack, followed by a new line.
+[pstr.c](./pstr.c) | C function that prints the string starting at the top of the stack, followed by a new line.
+[rotl.c](./rotl.c) | C function that rotates the stack to the top.
+[rotr.c](./rotr.c) | C function that rotates the stack to the bottom.
+[queue.c](./queue.c) | C function that Implement the stack and queue opcodes.
 
 ## Authors
 
-Edgar Santander
+Edgar Santander(https://github.com/easantanders21)
 
-Diego Fernando Jojoa Yandún
+Diego Fernando Jojoa Yandún(https://github.com/diegojojoayandun)
