@@ -1,4 +1,4 @@
-# 0x19. C - Stacks, Queues - LIFO,
+# 0x19. C - Stacks, Queues - LIFO, Monty Project
 
 ![alt text](http://montyscoconut.github.io/assets/media//wallpaper-1024.jpg)
 
@@ -28,7 +28,9 @@ pall$
 Files | Description
 ----- | -----------
 [monty.h](./monty.h) | Header file containing all the function prototypes of this project, and the definition of the structures
-[0-print_dlistint.c](./0-print_dlistint.c) | C function that prints all the elements of a dlistint_t list
+[monty.c](./monty.c) | C main file of the project, contains all work to read, parse, and interpreter monty opcodes
+[push.c](./push.h) | C function to pushes an element to the stack.
+[pint.c](./pint.c) | C function prints the value at the top of the stack, followed by a new line
 [1-dlistint_len.c](./1-dlistint_len.c) | C function that returns the number of elements in a linked dlistint_t list
 [2-add_dnodeint.c](./2-add_dnodeint.c) | C function that adds a new node at the beginning of a dlistint_t list
 [3-add_dnodeint_end.c](./3-add_dnodeint_end.c) | C function that adds a new node at the end of a dlistint_t list
