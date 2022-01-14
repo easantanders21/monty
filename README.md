@@ -24,6 +24,12 @@ pall$
 @ubuntu:~/monty$
 ```
 
+## Compilation & Output
+
+    Your code will be compiled this way:
+
+``$ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty``
+
 ## Table of contents
 Files | Description
 ----- | -----------
