@@ -32,7 +32,7 @@ pall$
 
 2. Your code will be compiled this way:
 
-        $ gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
+        gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
 
 3. Usage the monty file:
 
